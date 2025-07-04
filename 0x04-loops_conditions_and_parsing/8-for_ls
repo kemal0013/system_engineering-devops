@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Displays names after dash using for loop
+# This script lists the file name after the dash
 for file in *; do
   name="${file#*-}"
   echo $name

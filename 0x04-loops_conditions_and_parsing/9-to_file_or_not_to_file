@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Check if file exists, is empty, and regular
+# Checks file 'school' for existence, type and content
 FILE="school"
 if [ -e $FILE ]; then
   echo "school file exists"

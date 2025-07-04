@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Displays bad luck from cultures using case statement
+# Displays bad luck messages using a case statement
 i=1
 while [ $i -le 20 ]; do
   echo $i
