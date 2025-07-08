@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script lists the file name after the dash
+
+for file in *; do
+  if [[ -f "$file" && "$file" == *-* ]]; then
+    name="${file#*-}"
+    echo "$name"
+  fi
+done
+
