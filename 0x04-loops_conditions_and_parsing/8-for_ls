@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# This script lists the file name after the dash
+# This script lists the part of filenames after the first dash in the current directory
 for file in *; do
   name="${file#*-}"
-  echo $name
+  echo "$name"
 done
