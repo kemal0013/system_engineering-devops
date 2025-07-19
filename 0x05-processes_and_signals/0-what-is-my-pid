@@ -1,2 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Displays the current script's process ID (PID)
+
 echo "$$"

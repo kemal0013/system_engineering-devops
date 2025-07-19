@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Prints "To infinity and beyond" every 2 seconds indefinitely
+
 while true
 do
   echo "To infinity and beyond"
