@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # A Bash script that forcefully kills 7-highlander using SIGKILL
 
-pid=$(pgrep -f 7-highlander)
+pid=$(pgrep -f 7-highlander | head -n 1)
 [ -n "$pid" ] && kill -9 "$pid"
