@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# This script terminates the process running "4-to_infinity_and_beyond" using kill -TERM.
-PID=$(pgrep -f 4-to_infinity_and_beyond)
-[ -n "$PID" ] && kill -TERM "$PID"
