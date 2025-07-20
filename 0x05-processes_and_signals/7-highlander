@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
-# Trap SIGTERM and print a message without exiting
+# This script traps the SIGTERM signal and prints "OK" instead of exiting.
 
-# Set up trap for SIGTERM
-trap 'echo "I am invincible!!!"' SIGTERM
+trap 'echo "OK"' SIGTERM
 
-# Infinite loop
 while true
 do
-    echo "To infinity and beyond"
+    echo "There can be only one..."
     sleep 2
 done
