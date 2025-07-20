@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Trap SIGTERM and print a message instead of exiting
 
+# Set up trap for SIGTERM
+trap 'echo "I am invincible!!!"' SIGTERM
 
 # Infinite loop
 while true
