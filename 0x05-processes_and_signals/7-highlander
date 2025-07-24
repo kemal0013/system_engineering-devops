@@ -5,7 +5,8 @@
 exec > >(while read -r line; do printf '%s\n' "$line"; done)
 
 # Handler function
-handle_sigterm() { echo "I am invincible!!!"
+handle_sigterm() { echo "I am invincible!!!
+I am invincible!!!"
     # Ensure output is flushed
     sync
 }
