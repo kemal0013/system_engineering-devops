@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
+# Infinite loop script that handles SIGTERM by printing a message instead of terminating
 
-# Function that gets called on SIGTERM
 term_handler() {
-  echo "I am invincible!!!"
+    echo "I am invincible!!!"
 }
 
-# Set the trap BEFORE the loop starts
 trap term_handler SIGTERM
 
-# Infinite loop with message
-while true
-do
-  echo "To infinity and beyond"
-  sleep 2
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
 done
