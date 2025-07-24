@@ -1,15 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Function to handle SIGTERM
-handle_sigterm() {
-    echo "I am invincible!!!"
+# Function that gets called on SIGTERM
+term_handler() {
+  echo "I am invincible!!!"
 }
 
-# Trap SIGTERM signal
-trap handle_sigterm SIGTERM
+# Set the trap BEFORE the loop starts
+trap term_handler SIGTERM
 
-# Infinite loop
-while true; do
-    echo "To infinity and beyond"
-    sleep 2
+# Infinite loop with message
+while true
+do
+  echo "To infinity and beyond"
+  sleep 2
 done
