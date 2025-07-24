@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
-# Infinite loop script that handles SIGTERM by printing a message instead of terminating
+# Script that runs indefinitely and handles SIGTERM signals gracefully
 
-term_handler() {
+# Function to handle SIGTERM
+handle_term() {
     echo "I am invincible!!!"
 }
 
-trap term_handler SIGTERM
+# Trap SIGTERM signal before starting the loop
+trap 'handle_term' SIGTERM
 
+# Main infinite loop
 while true; do
     echo "To infinity and beyond"
     sleep 2
