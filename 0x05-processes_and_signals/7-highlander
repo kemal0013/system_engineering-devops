@@ -1,11 +1,15 @@
 #!/bin/bash
 
 # Function to handle SIGTERM
-trap 'echo "I am invincible!!!"' SIGTERM
+handle_sigterm() {
+    echo "I am invincible!!!"
+}
+
+# Trap SIGTERM signal
+trap handle_sigterm SIGTERM
 
 # Infinite loop
-while true
-do
+while true; do
     echo "To infinity and beyond"
     sleep 2
 done
