@@ -3,7 +3,7 @@
 
 # Function to handle SIGTERM
 handle_term() {
-    echo "I am invincible!!!"
+    echo I am invincible!!!
 }
 
 # Trap SIGTERM signal before starting the loop
