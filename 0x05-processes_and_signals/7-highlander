@@ -1,19 +1,20 @@
 #!/usr/bin/env bash
-# Infinite loop script that reliably handles SIGTERM
+# Infinite loop that properly handles SIGTERM
 
 # Ensure immediate output
-exec > >(while read -r line; do echo "$line"; done)
+exec > >(while read -r line; do printf '%s\n' "$line"; done)
 
-# Signal handler function
-handle_term() {
+# Handler function
+handle_sigterm() {
     echo "I am invincible!!!"
+    # Ensure output is flushed
+    sync
 }
 
-# Set trap FIRST with proper quoting
-trap 'handle_term' SIGTERM
+# Set trap IMMEDIATELY with proper quoting
+trap 'handle_sigterm' SIGTERM
 
 # Main loop
-while :; do
+while sleep 2; do
     echo "To infinity and beyond"
-    sleep 2
 done
