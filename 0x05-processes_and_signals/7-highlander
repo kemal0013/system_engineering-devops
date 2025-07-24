@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
-# Displays "To infinity and beyond" indefinitely
-# Responds to SIGTERM by printing "I am invincible!!!" and keeps going
 
-# Set the signal handler once before the loop
-trap 'echo "I am invincible!!!"' SIGTERM
+# Function that gets called on SIGTERM
+term_handler() {
+  echo "I am invincible!!!"
+}
 
+# Set the trap BEFORE the loop starts
+trap term_handler SIGTERM
+
+# Infinite loop with message
 while true
 do
   echo "To infinity and beyond"
