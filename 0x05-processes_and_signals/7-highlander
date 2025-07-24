@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
+# 7-highlander: Prints a message and handles SIGTERM gracefully
 
-# Handle SIGTERM by printing the required message
-trap 'echo "I am invincible!!!"' SIGTERM
+# Function to handle SIGTERM
+handle_sigterm() {echo "I am invincible!!!"}
 
-# Infinite loop with sleep and echo
+# Set trap
+trap handle_sigterm SIGTERM
+
+# Infinite loop
 while true
 do
     echo "To infinity and beyond"
